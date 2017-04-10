@@ -27,7 +27,7 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        // If guard is null, auto set guard to the default defined in auth config        
+        // If guard is null, auto set guard to the default defined in auth config
         if (! $guard) {
             $guard = config('auth.defaults.guard');
         }

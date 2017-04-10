@@ -11,17 +11,17 @@ class LoginBaseController extends Controller
      */
     private $guard_auth_redirect = [
         'web' => [
-            'url_segment' => null
+            'url_segment' => null,
         ],
         'admin' => [
-            'url_segment' => 'backend'
+            'url_segment' => 'backend',
         ],
     ];
 
     /**
      * Create a new authentication controller instance.
      * Make sure the url.intended is valid for current segment
-     * 
+     *
      * E.g.
      *     Assuming that you are logged out.
      *     When you visit '/backend/admin-only', the url.intended is set to '/backend/admin-only'
@@ -37,7 +37,7 @@ class LoginBaseController extends Controller
         if (! $url_intended) {
             return;
         }
-        
+
         // Get intended url segments
         $url_intended = str_replace(url('/'), '', $url_intended);
         $url_intended = trim($url_intended, '/');
@@ -48,7 +48,7 @@ class LoginBaseController extends Controller
             $url_intended_segments[0] = '';
         }
 
-        // If guard is null, auto set guard to the default defined in auth config        
+        // If guard is null, auto set guard to the default defined in auth config
         if (! $guard) {
             $guard = config('auth.defaults.guard');
         }
@@ -69,7 +69,7 @@ class LoginBaseController extends Controller
         if (is_null($guard_url_segment) && in_array($url_intended_segments[0], $all_url_segments)) {
             session()->forget('url.intended');
         }
-        // If guard url segment is null, this is already good return early  
+        // If guard url segment is null, this is already good return early
         elseif (is_null($guard_url_segment)) {
             return;
         }

@@ -38,7 +38,7 @@ Route::group(['prefix' => 'backend'], function () {
     $this->post('password/email', 'Admin\Auth\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
     $this->get('password/reset/{token?}', 'Admin\Auth\ResetPasswordController@showResetForm')->name('admin.password.reset');
     $this->post('password/reset', 'Admin\Auth\ResetPasswordController@reset');
-    
+
     Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('/', 'Admin\DashboardController@index');
     });
