@@ -1,7 +1,5 @@
 {
   "/js/app.js": "/js/app.js",
-  "/css/app.css": "/css/app.css",
-  "/admin/css/auth.css": "/admin/css/auth.css",
   "/admin/css/auth_all.css": "/admin/css/auth_all.css",
   "/admin/js/auth_all.js": "/admin/js/auth_all.js"
 }
