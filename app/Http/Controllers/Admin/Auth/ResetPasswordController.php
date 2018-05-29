@@ -24,7 +24,7 @@ class ResetPasswordController extends Controller
     use ResetsPasswords;
 
     /**
-     * Which guard is using
+     * Which guard is using.
      *
      * @var string
      */
