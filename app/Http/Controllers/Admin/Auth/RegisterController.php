@@ -24,7 +24,7 @@ class RegisterController extends Controller
     use RegistersUsers;
 
     /**
-     * Which guard is using
+     * Which guard is using.
      *
      * @var string
      */
