@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class RedirectIfAuthenticated
 {
     /**
-     * Redirect paths of guards
+     * Redirect paths of guards.
      *
      * @var array
      */
