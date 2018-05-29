@@ -24,7 +24,7 @@ class LoginController extends LoginBaseController
     use AuthenticatesUsers;
 
     /**
-     * Which guard is using
+     * Which guard is using.
      *
      * @var string
      */
